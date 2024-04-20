@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+	
+	
+</head>
+<body>
+<div class="d-flex">
+	<div id="w"style='background: red;width: 15%;'>
+		
+	</div>
+	<div id="opp" class="d-flex flex-warp" style="width:50%" >
+		
+	</div>
+	<div style="width:30%"></div>
+
+</div>
+	<script>
+		var a;
+          axios.get("https://fakestoreapi.in/api/products/category").then(function(res){
+          	// console.log(res.data.categories)
+          	a=(res.data.categories)
+          	categories()
+
+
+
+          })
+
+          function categories(){
+          	a.forEach(function(b){
+          		var c=document.createElement('li')
+          		c.innerHTML=b
+          		c.style.padding="40px"
+
+          		document.getElementById('w').appendChild(c)
+          		c.onclick=function(){
+          			  axios.get("https://fakestoreapi.in/api/products/category?type="+b).then(function(res){
+          			  	console.log(res.data)
+          			  	q=(res.data.products)
+          			  console.log(q)
+          			  pro()
+
+
+
+
+          			  w=(res.data.brand)
+          			  console.log(w)
+          			  
+
+          			  })
+          			  
+          		}
+          	})
+          }
+          function pro(){
+          	document.getElementById('opp').innerHTML=''
+          q.forEach(function(v){
+
+          	var k=document.createElement('div')
+          	k.style.width="15%"
+          	
+
+          	var m=document.createElement('img')
+          	m.src=v.image
+          	k.appendChild(m)
+          	document.getElementById('opp').appendChild(k)
+          	m.style.width='30%'
+
+
+
+          	 var l=document.createElement("p")
+                l.innerHTML=v.brand
+                k.appendChild(l)
+
+                var n=document.createElement('h5')
+                n.innerHTML=v.color
+                k.appendChild(n)
+
+
+                var g=document.createElement('h4')
+                g.innerHTML=v.price
+                k.appendChild(g)
+
+                var f=document.createElement('p')
+                f.innerHTML=v.model
+                k.appendChild(f)
+                // var t=document.createElement('p')
+                // t.innerHTML=v.description
+                // k.appendChild(t)
+
+          })
+
+          
+          }
+
+
+
+	</script>
+</body>
+ </html>

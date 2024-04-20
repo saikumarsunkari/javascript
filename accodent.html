@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	
+</head>
+<style>
+	p{
+		display: none;
+	}
+</style>
+<body>
+	<div>
+		<h1 id="abc">HTML<i class="bi bi-plus-circle"></i>
+		</h1>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt nam corporis odio, minima officia, architecto inventore rerum saepe nihil veritatis alias, at esse ad excepturi atque! Deleniti aliquid, dignissimos!</p>
+		<h1 id="abc">CSS <i class="bi bi-plus-circle"></i></h1>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt nam corporis odio, minima officia, architecto inventore rerum saepe nihil veritatis alias, at esse ad excepturi atque! Deleniti aliquid, dignissimos!</p>
+		<h1 id="abc">JAVA-SCRIPT <i class="bi bi-plus-circle"></i></h1>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt nam corporis odio, minima officia, architecto inventore rerum saepe nihil veritatis alias, at esse ad excepturi atque! Deleniti aliquid, dignissimos!</p>
+	</div>
+	<script>
+
+		document.querySelectorAll('h1').forEach(fuction(e){
+			el.onclick=function(e){
+				console.log(el)
+}
+			
+			document.querySelectorAll('p').forEach(fuction(el){
+				el.style.disply='none'
+			
+			})
+			document.querySelectorAll('i').forEach(fuction(){
+				el.classList.replace('bi-dash-circle','bi-plus-circle')
+			})
+			e.target.nextElementSibling.style.disply='block'
+			e.target.children[0].classList.replace('bi-dash-circle','bi-plus-circle')
+
+			})
+		
+		
+	</script>
+</body>
+</html>

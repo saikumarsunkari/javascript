@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h1 id="like">like: <span></span></h1>
+    <h1 id="share">share: <span></span></h1>
+    <h1 id="save">save: <span></span></h1>
+    <h1 id="comments">comments: <span></span></h1>
+    <h1 id="subscribe">subscribe: <span></span></h1>
+
+
+    <h1 id="like">like: <span></span></h1>
+    <button onclick="like()">Like</button>
+    <button onclick="share()">share</button>
+    <button onclick="save()">save</button>
+    <button onclick="Comments()">Comment</button>
+    <button onclick="subscribe()">subscribe</button>
+
+
+
+
+
+    <script>
+        var lik = 0;
+        document.querySelector("#like span").innerHTML = lik;
+        function like() {
+            lik++
+            document.querySelector("#like span").innerHTML = lik;
+
+        }
+
+        var shar = 0;
+        document.querySelector('#share span').innerHTML = shar;
+        function share() {
+            shar++
+            document.querySelector('#share span').innerHTML = shar;
+        }
+
+
+
+        var sav = 0;
+        document.querySelector('#save span').innerHTML = sav;
+        function save() {
+            sav++
+            document.querySelector('#save span').innerHTML = sav;
+        }
+
+
+
+        var com = 0;
+        document.querySelector('#comments span').innerHTML = com;
+        function Comments() {
+            com++
+            document.querySelector('#comments span').innerHTML = com
+        }
+
+
+        var subs = 0;
+        document.querySelector('#subscribe span').innerHTML = subs;
+        function subscribe() {
+            subs++
+            document.querySelector('#subscribe span').innerHTML = subs;
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

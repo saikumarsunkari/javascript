@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>objects</title>
+</head>
+<body>
+	<script>
+		var person={
+			"firstName":"sai kumar",
+			"lastName":"sunkari",
+			"age":30,
+			"gender":"male",
+			"skill":"ReactJS",
+			"expertise":'Beginner'
+		}
+		console.log(person['firstName'])
+		console.log(person['lastName'])
+		console.log(person["firstName"]+person['lastName'])
+		if (person ['age']<=18) {
+			console.log('fales')
+		}
+			
+		else{
+			console.log('true')
+		}
+		var marks={
+			"maths":34,
+			"english":56,
+			"science":32,
+			"hindi":75,
+			"social science":65
+		};
+		console.log(marks['maths']+marks['english']+marks['science']+marks['social science']+marks['hindi']);
+		for (var u in marks){
+			console.log(u)
+			// console.log(marks[u])
+
+		} 
+		var c=0;
+		for (var u in marks){
+			c=c+1;
+			console.log(c)
+		}
+		// var a=0;
+		// for (var a in marks){
+		// 	p=(marks[u]/100)*100
+		// 	console.log(p)
+		// }
+		for (var u in marks){
+			if(marks[u]<35){
+				console.log(u)
+			}
+		}
+		for (var u in marks){
+			if(marks[u]>35){
+				console.log(u)
+			}
+		}
+
+
+
+		var x=0;
+		for (var u in marks){
+			if (marks[u]>35) {
+				x=x+1;
+			}
+		}
+				console.log(x)
+
+
+		// for (var u in marks){
+		// 	if (marks[u]<35) {
+		// 		console.log(u)
+		// 	}
+		// }
+				// var z=0;
+				// for (var u in marks){
+				// 	if (marks[u]<35) {
+				// 		z=z+1
+				// 	}
+				// }
+				// console.log(z);
+
+// var min=Infinity;
+// var q;
+// for(var u in marks){
+// 	if (min>marks[u]) {
+// 		min=marks[u]
+// 		a=u
+// 	}
+// }
+// console.log(min,q)
+
+// var max=-Infinity;
+// var w;
+// for (var u in marks){
+// 	if (max<marks[u]) {
+// 	max=marks[u]
+// 	w=u
+// 			}
+// }
+// console.log(max,w)
+
+
+// for(var u in marks){
+//       if (marks[u]>35) {
+// 			console.log(u,'true')
+// 		}
+// 		else{
+// 			console.log(u,'fales')
+// 		}
+// 	}
+
+
+	var s=prompt()
+	
+		if (marks[s]>35) {
+			console.log(marks[s],'student pass the all the subjects')
+		}
+		else{
+			console.log(marks[s] ,'student not pass the all the subjects')
+		}
+	
+
+
+
+
+	</script>
+</body>
+</html>

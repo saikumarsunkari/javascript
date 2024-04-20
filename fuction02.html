@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+</head>
+<body>
+	<input type="text" id="d3">
+	<button onclick="abc()">Add element</button>
+	<ul id="d2"></ul>
+
+	<script>
+
+var ar=['sai kumar','dinesh','sai ram']
+ 
+
+function sai(){
+	document.getElementById("d2").innerHTML=''
+ar.forEach(function(a,i){
+	var nli=document.createElement('li')
+	nli.innerHTML=a
+	document.getElementById('d2').appendChild(nli)
+	var btn=document.createElement('button')
+	btn.innerHTML='Delete'
+	btn.onclick=function ad(){
+		ar.splice(i,1)
+		sai()
+	}
+	nli.appendChild(btn)
+	
+})
+}sai()
+
+
+function abc(){
+	var val=document.getElementById('d3').value
+	
+	ar.push(val)
+ sai()
+	// genlist()
+	console.log(ar)
+}
+
+
+
+
+		
+	</script>
+</body>
+</html>

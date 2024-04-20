@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-around mt-5">
+            <div class="d1 bg-success px-4 py-4">
+                <h1 id="like"><i class="bi bi-hand-thumbs-up fs-1" onclick="like()"></i> <span></span></h1>
+
+
+
+            </div>
+
+
+            <div class="d2 bg-warning px-4 py-4">
+                <h1 id="share"><i class="bi bi-share fs-1 px-5" onclick="share()"></i><span class="o"></span></h1>
+
+
+
+            </div>
+
+
+            <div class="d3 bg-primary px-4 py-4">
+                <h1 id="save"><i class="bi bi-download fs-1" onclick="save()"></i> <span></span></h1>
+
+
+
+            </div>
+            <div class="d4 bg-danger px-4 py-4">
+                <h1 id="comments"><i class="bi bi-chat fs-1 px-5" onclick="Comments()"></i> <span></span></h1>
+
+
+            </div>
+            <div class="d5 bg-info px-4 py-4">
+                <h1 id="subscribe"> <i class="bi bi-bell fs-1" onclick="subscribe()"></i><span></span></h1>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        var lik = 0;
+        document.querySelector("#like span").innerHTML = lik;
+        function like() {
+            lik++
+            document.querySelector("#like span").innerHTML = lik;
+
+        }
+
+        var shar = 0;
+        document.querySelector('#share span').innerHTML = shar;
+        function share() {
+            shar++
+            document.querySelector('#share span').innerHTML = shar;
+        }
+
+
+
+        var sav = 0;
+        document.querySelector('#save span').innerHTML = sav;
+        function save() {
+            sav++
+            document.querySelector('#save span').innerHTML = sav;
+        }
+
+
+
+        var com = 0;
+        document.querySelector('#comments span').innerHTML = com;
+        function Comments() {
+            com++
+            document.querySelector('#comments span').innerHTML = com
+        }
+
+
+        var subs = 0;
+        document.querySelector('#subscribe span').innerHTML = subs;
+        function subscribe() {
+            subs++
+            document.querySelector('#subscribe span').innerHTML = subs;
+
+        }
+
+
+    </script>
+</body>
+
+</html>

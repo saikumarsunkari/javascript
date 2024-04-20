@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="d13">
+    <button onclick="show()">submit</button>
+<div id="d12">
+    
+</div>
+    <script>
+        var names=[]
+        function show(){
+         var c=document.getElementById('d13').value
+             names.push(c)
+             var a=document.createElement('li')
+             a.innerHTML=c
+               var f=document.createElement('button')
+               f.innerHTML='done'
+               a.appendChild(f)
+                f.onclick=function(s){
+                a.style.color="red"
+                s.target.style.display="none"
+                s.target.nextElementSibling.style.display='none'
+                var r=document.createElement('button')
+                r.innerHTML='delete'
+                a.appendChild(r)
+                r.onclick =function(x){
+                    x.target.parentElement.style.display='none'
+                }
+                
+                console.dir(s)
+               }
+               var e=document.createElement('button')
+               e.innerHTML='edit'
+               a.appendChild(e)
+               
+               
+
+
+             document.getElementById('d12').appendChild(a)
+
+        
+        }
+        
+
+    </script>
+</body>
+
+</html>

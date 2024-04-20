@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/*.opp{
+			width: 300px;
+			height: 200px;
+			border: 2px solid green;
+		}*/
+	</style>
+</head>
+<body>
+	<div style="text-align:center;">
+	<h1 style="text-align: center; color: red;">Add Contact Cards</h1>
+<div class="opp">
+	<h3>name: <input type="text" id="d1"></h3>
+	<h3>number: <input type="number" id="d2"></h3>
+	<h3>Email: <input type="email" id="d3"></h3>
+	<h3>Enter image URL: <input type="img" id="d4"></h3>
+	</div>
+	<button style="background-color: orange;" onclick="btn()">add contact</button>
+	
+	</div>
+	<script>
+	function btn(){
+		var x=document.getElementById('d1')
+		console.log(x.value)
+		var c=document.getElementById('d2')
+		console.log(c.value)
+		var d=document.getElementById('d3')
+		console.log(d.value)
+		var i=document.getElementById('d4')
+		console.log(i.value)
+	}
+	</script>
+</body>
+</html>
